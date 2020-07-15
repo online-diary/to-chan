@@ -1,0 +1,224 @@
+@import './variables';
+
+.hero-section {
+     height: 100vh !important;
+     z-index: 0;
+     background-image: url('../imgs/hero.svg');
+     background-size: cover;
+
+     .container {
+          height: 100%;
+          width: 100%;
+     }
+
+     .col-12 {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          h1 {
+               font-size: 35px;
+               color: #FF5722;
+          }
+
+          h1:nth-child(1) {
+               animation: blury 3s forwards;
+               filter: blur(30px);
+          }
+
+          h1:nth-child(2) {
+               animation: blury 3s 1s forwards;
+               filter: blur(30px);
+          }
+
+          h1:nth-child(3) {
+               animation: blury 3s 2s forwards;
+               filter: blur(30px);
+          }
+
+          h1:nth-child(4) {
+               animation: blury 3s 3s forwards;
+               filter: blur(30px);
+          }
+
+          a {
+               animation: blury 3s 4s forwards;
+               filter: blur(30px);
+          }
+
+          @keyframes blury {
+               from {
+                    filter: blur(30px);
+               }
+
+               to {
+                    filter: blur(0px);
+               }
+          }
+     }
+}
+
+.pass-through {
+     position: relative;
+     z-index: 1;
+     background: white;
+     padding: 0;
+     margin: 0 auto;
+
+     p {
+          @extend %secondary-font;
+     }
+
+     .abt-u {
+          background-image: url('../imgs/card-bg.svg');
+          background-size: cover;
+          font-size: 12px;
+     }
+
+}
+
+.two-section-one {
+     background: white;
+     z-index: 1;
+
+     .card {
+          width: 321px;
+          margin: auto;
+
+          .card-body {
+               overflow: hidden;
+               position: relative;
+               min-height: 387px;
+               overflow: hidden;
+          }
+     }
+
+     i {
+          font-size: 60px;
+          color: #ff1616;
+          text-shadow: 1px 7px 12px rgba(0, 0, 0, 0.54);
+     }
+}
+
+.dream {
+     position: relative;
+     background: white;
+
+     p {
+          background: #FF5722;
+          color: white;
+          display: inline-block;
+          padding: 3px 10px;
+          border-radius: 3px;
+          position: relative;
+     }
+
+     p::before {
+          content: '';
+          position: absolute;
+          border-width: 7px;
+          border-style: solid;
+          border-color: transparent #FF5722 transparent transparent;
+          transform: translate(-50%, -50%);
+          left: -6px;
+          top: 50%;
+     }
+
+     p.right::before {
+          content: '';
+          position: absolute;
+          border-width: 7px;
+          border-style: solid;
+          border-color: transparent transparent transparent #FF5722;
+          transform: translate(0%, -50%);
+          top: 50%;
+          left: 100%;
+     }
+}
+
+.slider {
+     position: relative;
+     background: #f5f5f5;
+     border-width: 2px;
+
+     .item {
+          width: 100px;
+          height: 150px;
+          background: linear-gradient(45deg, #ff5722, #FF9800);
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 15px 5px;
+          overflow: hidden;
+
+          h4 {
+               color: white;
+               font-size: 10px;
+               text-align: center;
+               padding: 3px;
+               line-height: 23px;
+          }
+     }
+
+     .owl-theme .owl-dots .owl-dot span {
+          width: 5px;
+          height: 5px;
+     }
+
+     .owl-theme .owl-dots .owl-dot.active span {
+          background: #ff6b17;
+     }
+}
+
+.flower {
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     background: rgba(26, 26, 26, 0.5490196078431373);
+     z-index: 3;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transform: translate(-50%);
+     left: 50%;
+
+
+     .give-her {
+          width: 200px;
+          background: #ffffff;
+          height: 200px;
+          border-radius: 50%;
+          padding: 20px;
+          box-sizing: border-box;
+          position: relative;
+
+          &::before {
+               position: absolute;
+               content: '';
+               width: 110%;
+               height: 110%;
+               border-radius: 50%;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%) rotateZ(0deg);
+               border: 5px solid;
+               border-color: white transparent;
+               animation: rotty 2s forwards;
+          }
+
+          @keyframes rotty {
+               from {
+                    transform: translate(-50%, -50%) rotateZ(0deg);
+                    border-color: #FF5722 transparent;
+               }
+
+               to {
+                    transform: translate(-50%, -50%) rotateZ(180deg);
+                    border-color: white transparent;
+               }
+          }
+     }
+}

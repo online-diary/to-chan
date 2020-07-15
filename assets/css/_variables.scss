@@ -1,0 +1,24 @@
+%secondary-font {
+     font-family: 'Cairo', sans-serif;
+     font-family: 'Merienda One', cursive;
+}
+
+* {
+     box-sizing: border-box;
+}
+
+html,
+body {
+     padding: 0;
+     margin: 0;
+     scroll-behavior: smooth;
+     font-family: 'Cairo', sans-serif;
+}
+
+.btn {
+     border-radius: 0px;
+}
+
+.container-fluid {
+     max-width: 500px;
+}
