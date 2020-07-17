@@ -163,6 +163,10 @@ body {
   position: relative;
 }
 
+.dream p.right {
+  background: #3F51B5;
+}
+
 .dream p::before {
   content: '';
   position: absolute;
@@ -180,7 +184,7 @@ body {
   position: absolute;
   border-width: 7px;
   border-style: solid;
-  border-color: transparent transparent transparent #FF5722;
+  border-color: transparent transparent transparent #3F51B5;
   -webkit-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
   top: 50%;

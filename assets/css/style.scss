@@ -115,6 +115,10 @@
           position: relative;
      }
 
+     p.right {
+          background: #3F51B5;
+     }
+
      p::before {
           content: '';
           position: absolute;
@@ -131,7 +135,7 @@
           position: absolute;
           border-width: 7px;
           border-style: solid;
-          border-color: transparent transparent transparent #FF5722;
+          border-color: transparent transparent transparent #3F51B5;
           transform: translate(0%, -50%);
           top: 50%;
           left: 100%;
