@@ -53,6 +53,7 @@ body {
 .hero-section .col-12 h1 {
   font-size: 35px;
   color: #FF5722;
+  font-family: 'Oswald', sans-serif;
 }
 
 .hero-section .col-12 h1:nth-child(1) {
@@ -79,6 +80,13 @@ body {
 .hero-section .col-12 h1:nth-child(4) {
   -webkit-animation: blury 3s 3s forwards;
           animation: blury 3s 3s forwards;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+}
+
+.hero-section .col-12 h1:nth-child(5) {
+  -webkit-animation: blury 3s 4s forwards;
+          animation: blury 3s 4s forwards;
   -webkit-filter: blur(30px);
           filter: blur(30px);
 }
@@ -319,19 +327,24 @@ body {
 .slider-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 35px;
-  height: 35px;
-  background: url("http://iconizer.net/files/Duesseldorf/orig/heart.png") no-repeat;
-  border-radius: 0 !important;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   cursor: pointer;
+  background: #FF5722;
+  border: 0;
 }
 
 .slider-range::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: #4CAF50;
   cursor: pointer;
+  background: #FF5722;
+  border: 0;
 }
 
 .confirm {

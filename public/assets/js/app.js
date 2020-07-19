@@ -54,6 +54,7 @@
                     } else {
                          dbRef.on('value', (snap) => {
                               $('.slider-range').val(snap.val());
+                              $('.percent').text(snap.val());
                          });
                          $('.pw').hide();
                     }
@@ -66,6 +67,7 @@
           //get value and chage ui
           dbRef.on('value', (snap) => {
                $('.slider-range').val(snap.val());
+               $('.percent').text(snap.val());
           });
 
      });

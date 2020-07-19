@@ -21,6 +21,7 @@
           h1 {
                font-size: 35px;
                color: #FF5722;
+               font-family: 'Oswald', sans-serif;
           }
 
           h1:nth-child(1) {
@@ -40,6 +41,11 @@
 
           h1:nth-child(4) {
                animation: blury 3s 3s forwards;
+               filter: blur(30px);
+          }
+
+          h1:nth-child(5) {
+               animation: blury 3s 4s forwards;
                filter: blur(30px);
           }
 
@@ -239,19 +245,23 @@
      &::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
-          width: 35px;
-          height: 35px;
-          background: url('http://iconizer.net/files/Duesseldorf/orig/heart.png') no-repeat;
-          border-radius: 0 !important;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
           cursor: pointer;
+          background: #FF5722;
+          border: 0;
      }
 
      &::-moz-range-thumb {
-          width: 25px;
-          height: 25px;
+          -webkit-appearance: none;
+          appearance: none;
+          width: 20px;
+          height: 20px;
           border-radius: 50%;
-          background: #4CAF50;
           cursor: pointer;
+          background: #FF5722;
+          border: 0;
      }
 }
 
