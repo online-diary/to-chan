@@ -187,13 +187,14 @@
      width: 100vw;
      height: 100vh;
      position: fixed;
-     background: rgba(26, 26, 26, 0.5490196078431373);
+     background: #FF5722;
      z-index: 3;
      display: flex;
      align-items: center;
      justify-content: center;
-     transform: translate(-50%);
      left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
 
 
      .give-her {
@@ -203,32 +204,76 @@
           border-radius: 50%;
           padding: 20px;
           box-sizing: border-box;
-          position: relative;
+          position: absolute;
+          animation: shape 1s forwards;
+          left: 50%;
+          transform: translate(-50%, -50%);
 
-          &::before {
-               position: absolute;
+          &:before {
                content: '';
-               width: 110%;
-               height: 110%;
-               border-radius: 50%;
-               top: 50%;
+               position: absolute;
+               background: white;
+               width: 2px;
+               height: 72px;
+               transform: translate(-50%, -50%);
                left: 50%;
-               transform: translate(-50%, -50%) rotateZ(0deg);
-               border: 5px solid;
-               border-color: white transparent;
-               animation: rotty 2s forwards;
+               top: 118%;
           }
 
-          @keyframes rotty {
-               from {
-                    transform: translate(-50%, -50%) rotateZ(0deg);
-                    border-color: #FF5722 transparent;
+          p {
+               position: absolute;
+               margin: 0;
+               background: white;
+               padding: 5px 10px;
+               border-radius: 5px;
+               transform: translate(-50%, -50%);
+               left: 50%;
+               top: 100%;
+               margin-top: 72px;
+
+               &:before {
+                    position: absolute;
+                    content: 'I love You';
+                    background: black;
+                    color: white;
+                    text-align: center;
+                    font-size: 13px;
+                    padding: 10px;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    top: 0;
+                    left: 100%;
+                    transform: translate(-50%, -50%);
+                    margin-top: -21px;
+                    margin-left: 35px;
                }
 
-               to {
-                    transform: translate(-50%, -50%) rotateZ(180deg);
-                    border-color: white transparent;
+               &:after {
+                    content: '';
+                    position: absolute;
+                    transform: translate(-50%, -50%) rotate(46deg);
+                    top: 2px;
+                    left: 118%;
+                    background: black;
+                    width: 2px;
+                    height: 19px;
                }
+          }
+
+          @keyframes shape {
+               0% {
+                    top: 100%;
+               }
+
+               100% {
+                    top: 30%;
+               }
+
           }
      }
 }

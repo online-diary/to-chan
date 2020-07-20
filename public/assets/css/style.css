@@ -244,7 +244,7 @@ body {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background: rgba(26, 26, 26, 0.54902);
+  background: #FF5722;
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,9 +255,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
   left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .flower .give-her {
@@ -268,48 +269,96 @@ body {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: relative;
-}
-
-.flower .give-her::before {
   position: absolute;
-  content: '';
-  width: 110%;
-  height: 110%;
-  border-radius: 50%;
-  top: 50%;
+  -webkit-animation: shape 1s forwards;
+          animation: shape 1s forwards;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotateZ(0deg);
-          transform: translate(-50%, -50%) rotateZ(0deg);
-  border: 5px solid;
-  border-color: white transparent;
-  -webkit-animation: rotty 2s forwards;
-          animation: rotty 2s forwards;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-@-webkit-keyframes rotty {
-  from {
-    -webkit-transform: translate(-50%, -50%) rotateZ(0deg);
-            transform: translate(-50%, -50%) rotateZ(0deg);
-    border-color: #FF5722 transparent;
+.flower .give-her:before {
+  content: '';
+  position: absolute;
+  background: white;
+  width: 2px;
+  height: 72px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 118%;
+}
+
+.flower .give-her p {
+  position: absolute;
+  margin: 0;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  margin-top: 72px;
+}
+
+.flower .give-her p:before {
+  position: absolute;
+  content: 'I love You';
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 0;
+  left: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-top: -21px;
+  margin-left: 35px;
+}
+
+.flower .give-her p:after {
+  content: '';
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%) rotate(46deg);
+          transform: translate(-50%, -50%) rotate(46deg);
+  top: 2px;
+  left: 118%;
+  background: black;
+  width: 2px;
+  height: 19px;
+}
+
+@-webkit-keyframes shape {
+  0% {
+    top: 100%;
   }
-  to {
-    -webkit-transform: translate(-50%, -50%) rotateZ(180deg);
-            transform: translate(-50%, -50%) rotateZ(180deg);
-    border-color: white transparent;
+  100% {
+    top: 30%;
   }
 }
 
-@keyframes rotty {
-  from {
-    -webkit-transform: translate(-50%, -50%) rotateZ(0deg);
-            transform: translate(-50%, -50%) rotateZ(0deg);
-    border-color: #FF5722 transparent;
+@keyframes shape {
+  0% {
+    top: 100%;
   }
-  to {
-    -webkit-transform: translate(-50%, -50%) rotateZ(180deg);
-            transform: translate(-50%, -50%) rotateZ(180deg);
-    border-color: white transparent;
+  100% {
+    top: 30%;
   }
 }
 

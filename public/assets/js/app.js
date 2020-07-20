@@ -12,15 +12,11 @@
                dots: true
           })
 
-          // $(window).scroll(function () {
-          //      var amount = $(this).scrollTop();
-          //      if (amount > 200 || amount < 300) {
-          //           $('.flower').attr('class', 'container-fluid flower');
-          //      }
-          //      setTimeout(() => {
-          //           $('.flower').remove();
-          //      }, 3000);
-          // });
+          // Give Flower For Her
+          $('.flower').attr('class', 'container-fluid flower');
+          setTimeout(() => {
+               $('.flower').remove();
+          }, 3000);
 
           var firebaseConfig = {
                apiKey: "AIzaSyCqna-T2azTQepPQH9dnLe1xPNYk6Cv9Xc",
@@ -39,13 +35,13 @@
           $('.pw').hide();
           $('.slider-range').on('change', function (e) {
                e.preventDefault();
+               var data = $('.slider-range').val();
+               $('.percent').text(data);
                $('.pw').show();
                $('.confirm').click(function (e) {
                     e.preventDefault();
                     var pw = $('.pw-data').val();
-                    $('.pw-data').val('');
                     if (pw == 246022) {
-                         var data = $('.slider-range').val();
                          //update value...
                          firebase.database().ref().set({
                               'object': data
@@ -60,6 +56,10 @@
                     }
                })
 
+          });
+          $('.slider-range').on('input', function (e) {
+               var data = $('.slider-range').val();
+               $('.percent').text(data);
           });
 
           var dbRef = database.ref().child('object');
